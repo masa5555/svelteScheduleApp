@@ -25,3 +25,4 @@ jobs: # 参考　https://qiita.com/eyuta/items/341294c4b8d058fb9024
       - uses: cypress-io/github-action@v2
         with:
           wait-on: "http://localhost:8080"
+          working-directory: e2e
