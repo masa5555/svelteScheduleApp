@@ -1,38 +1,3 @@
-### コンセプト
-- TODO細分化
-- カレンダー表示
-- 時間計測、達成度表示
-全部組み合わせたアプリは新しい気がしたので
-
-### アプリ起動
-```
-npm install
-npm run dev
-```
-
-### 工夫した点
-- tsconfig
-- huskyを使い, prehookでテストとlint, formatを行う
-
-### 考慮
-- svelteKitまだ使ってない
-[SvelteKit](https://kit.svelte.dev)
-- ブラウザにsvelte-devtool入れても、有効にならない
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
 *Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
