@@ -1,0 +1,15 @@
+{
+  "name": "svelte-schedule-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "cd ./frontend; npm install --save-dev; npm run dev",
+    "lint": "cd ./frontend; npm run lint",
+    "svelte_check": "cd ./frontend; npm run check",
+    "test": "cd ./test/e2e; npm install --save-dev; npm run test",
+    "prepare": "npx husky install;"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

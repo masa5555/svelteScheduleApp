@@ -1,0 +1,19 @@
+{
+  "name": "svelte-schedule-app-e2e-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "cypress": "^9.5.3"
+  },
+  "dependencies": {
+    "typescript": "^4.6.3"
+  }
+}

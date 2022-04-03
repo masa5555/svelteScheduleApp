@@ -1,0 +1,32 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "typeRoots": ["./node_modeles/@types"],
+    "alwaysStrict": true,
+    "strictNullChecks": true, // 定義なしでnull, undefined入れられない
+    "strictFunctionTypes": true,　// 引数を反変性にする　https://typescriptbook.jp/reference/tsconfig/strictfunctiontypes
+    "strictPropertyInitialization": true, // クラスのconstructorで初期化必須
+    "noImplicitAny": true, // 暗黙のany禁止
+    "noImplicitThis": true,
+    "noErrorTruncation": true, // vscodeでhoverしたときに型定義表示を省略しない
+    "noEmitOnError": true, // TypeScriptでコンパイルエラーになったら、jsファイルを出力しない
+    "noUnusedLocals": true,　// 使われていない 変数 の禁止
+    "noUnusedParameters": true, // 使われていない 引数 の禁止
+    "noImplicitReturns": true, // 関数の戻り値の型必須
+    "noFallthroughCasesInSwitch": true, // switch文のfallthrouphを禁止
+    "noUncheckedIndexedAccess": true, // インデックス型のプロパティや配列要素を参照したときにundefinedチェック必須
+    "noPropertyAccessFromIndexSignature": true, // インデックス型のプロパティ参照に[]を必須
+    "experimentalDecorators": true,
+    "exactOptionalPropertyTypes": true, // オプションプロパティにundefinedの代入禁止
+    "allowUnreachableCode": false, // 到達不可能なコードの禁止
+    "allowUnusedLabels": false,
+    "useUnknownInCatchVariables": true // catchした値の型をunknown型にする
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules/*",
+    "__sapper__/*",
+    "app/public/*"
+  ]
+}

@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'pre-commit start'
+npm run lint
+npm run svelte_check
+npm run test
+echo 'pre-commit finish'
