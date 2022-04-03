@@ -21,7 +21,7 @@ jobs: # 参考　https://qiita.com/eyuta/items/341294c4b8d058fb9024
       - name: setup node16.x
         uses: actions/setup-node@v3
         with:
-          node-version: [16.x]
+          node-version: 16.x
 
       - name: Start App
         run: |
