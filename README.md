@@ -1,5 +1,5 @@
 ## なぜやるか
-- svelte, cypress試す 
+- svelte, cypress試す
 
 ## コンセプト
 - TODO細分化
