@@ -8,7 +8,7 @@
 全部組み合わせたアプリは新しい気がしたので
 
 ## 技術
-- server: ???
+- server: 未実装
 - frontend: svelte
 - E2E test: cypress
 https://typescript-jp.gitbook.io/deep-dive/intro-1/cypress#insutru
