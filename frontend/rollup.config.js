@@ -5,9 +5,18 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import globals from 'rollup-plugin-node-globals';
 import css from 'rollup-plugin-css-only';
+import alias from '@rollup/plugin-alias';
 
 const production = !process.env.ROLLUP_WATCH;
+
+const aliases = alias({
+  resolve: ['.svelte'],
+  entries: [
+		{ find: '@components', replacement: "src/components"}
+  ]
+});
 
 function serve() {
 	let server;
@@ -39,8 +48,9 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		aliases,
 		svelte({
-			preprocess: sveltePreprocess({ sourceMap: !production }),
+			preprocess: sveltePreprocess({ sourceMap: !production, scss: true, sass: true }),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
@@ -75,7 +85,9 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+		globals
 	],
 	watch: {
 		clearScreen: false

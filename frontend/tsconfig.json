@@ -2,6 +2,7 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
+    "baseUrl": "src",
     "typeRoots": ["./node_modeles/@types"],
     "alwaysStrict": true,
     "strictNullChecks": true, // 定義なしでnull, undefined入れられない
@@ -23,10 +24,10 @@
     "allowUnusedLabels": false,
     "useUnknownInCatchVariables": true // catchした値の型をunknown型にする
   },
-  "include": ["src/**/*"],
-  "exclude": [
-    "node_modules/*",
-    "__sapper__/*",
-    "app/public/*"
-  ]
+  "include": [
+    "src/components/**/*",
+    "src/store/**/*",
+    "src/types/**/*",
+    "src/main.ts"
+  ],
 }
