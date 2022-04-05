@@ -1,0 +1,30 @@
+name: 'code linting' 
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'release/**'
+    types: [opened, reopened, synchronize]
+jobs: # 参考　https://qiita.com/eyuta/items/341294c4b8d058fb9024
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      # リポジトリをチェックアウトし、ワークフローがリポジトリにアクセスできるようにする
+      # 参考: https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: setup node16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: lint frontend
+        run: |
+          npm install
+          npm run lint
+          npm run svelte_check
