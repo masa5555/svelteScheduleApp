@@ -1,31 +1,27 @@
 <script lang="ts">
-	import AppChild from './AppChild.svelte'
+	// component
+	import Header from '@components/organisms/Header.svelte'
+	import TaskView from '@components/templates/TaskView.svelte'
+	import ScheduleView from '@components/templates/ScheduleView.svelte'
+	import ProgressView from '@components/templates/ProgressView.svelte'
 
-	const name = 'My name aaa'
+	import { currentDisplayType } from 'store/display'
+
+	const mainComponentsMap = {
+		"TaskView": TaskView,
+		"ScheduleView": ScheduleView,
+		"ProgressView": ProgressView
+	}
 </script>
 
+
 <main>
-	<AppChild propString={name} />
-	<h1>Hello {name}!</h1>
-	{name}
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Header />
+	<svelte:component this={mainComponentsMap[$currentDisplayType]} />
 </main>
 
+
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
