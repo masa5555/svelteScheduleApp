@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "cd ./frontend; npm install --save-dev; npm run dev",
-    "lint": "cd ./frontend; npm run lint",
+    "lint": "cd ./frontend; npm install --save-dev; npm run lint",
     "svelte_check": "cd ./frontend; npm run check",
     "build": "cd ./frontend; npm install; npm run build",
     "test": "cd ./test/e2e; npm install --save-dev; npm run test",

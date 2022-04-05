@@ -1,7 +1,5 @@
 [![End-to-End Tests (cypress)](https://github.com/masa5555/svelteScheduleApp/actions/workflows/e2e.yml/badge.svg?branch=master)](https://github.com/masa5555/svelteScheduleApp/actions/workflows/e2e.yml)
-
 [![deploy GitHub Pages](https://github.com/masa5555/svelteScheduleApp/actions/workflows/github_pages.yml/badge.svg?branch=master)](https://github.com/masa5555/svelteScheduleApp/actions/workflows/github_pages.yml)
-
 [![lint](https://github.com/masa5555/svelteScheduleApp/actions/workflows/linting.yml/badge.svg?branch=master)](https://github.com/masa5555/svelteScheduleApp/actions/workflows/linting.yml)
 
 ## なぜやるか
