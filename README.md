@@ -30,7 +30,7 @@ npm run test
 - components 内を atomic design 風にした
   -（ネットで少し調べたことがある程度）
 - pre-commit hook で lint, testを行う
-- github action でも lint, test を行う
+- github action でも lint, test, gh-pagesへのデプロイ を自動で行う
   - 成功しないと、masterに取り組めないように　(branch protection rule)
 
 ## 課題（わかっていないこと）
